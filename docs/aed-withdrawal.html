@@ -19,32 +19,33 @@
 
     <div id="content">
       <div class="contentblock shadow">
-        <p>This nomogram estimates the risk of seizure recurrence after AED withdrawal in patients with epilepsy who are in remission. It also estimates long-term seizure freedom.</p>
+        <p>This nomogram estimates the risk of seizure recurrence after AED withdrawal in patients with epilepsy who are in remission. It also estimates long-term seizure freedom. This tool does not apply after epilepsy surgery.</p>
 
         <form id="mainform">
           <div class="half1"><div>
 
             <hr>
-            <p><strong>Q1: Duration of epilepsy before remission</strong></p>
+            <p><strong>Duration of epilepsy before remission (first to last seizure)</strong></p>
             <input type="number" name="duration" id="duration" placeholder="0" min="0" max="40" class="shadow">
             <span class="unit">years (0–40)</span>
 
             <hr>
-            <p><strong>Q2: Time since last seizure (at time of withdrawal)</strong></p>
+            <p><strong>Time since last seizure (seizure free interval)</strong></p>
             <input type="number" name="ttr" id="ttr" placeholder="0" min="0" max="24" class="shadow">
             <span class="unit">years (0–24)</span>
 
             <hr>
-            <p><strong>Q3: Number of AEDs at time of withdrawal</strong></p>
+            <p><strong>Number of AEDs at time of withdrawal</strong></p>
             <input type="number" name="naed" id="naed" placeholder="1" min="0" max="9" class="shadow">
+            <span class="unit">range (0–9)</span>
 
             <hr>
-            <p><strong>Q4: Age at onset of epilepsy</strong></p>
+            <p><strong>Age at onset of epilepsy</strong></p>
             <input type="number" name="ageonset" id="ageonset" placeholder="10" min="0" max="80" class="shadow">
             <span class="unit">years (0–80)</span>
 
             <hr>
-            <p><strong>Q5: Sex</strong></p>
+            <p><strong>Sex</strong></p>
             <div class="radios">
               <input type="radio" name="sex" value="male" id="sex_m" checked>
               <label class="radio shadow noselect clickable" for="sex_m">Male</label>
@@ -53,7 +54,7 @@
             </div>
 
             <hr>
-            <p><strong>Q6: Family history of epilepsy (1st or 2nd degree)</strong></p>
+            <p><strong>Family history of epilepsy (1st or 2nd degree)</strong></p>
             <div class="radios">
               <input type="radio" name="famhist" value="negative" id="fh_neg" checked>
               <label class="radio shadow noselect clickable" for="fh_neg">Negative</label>
@@ -66,7 +67,7 @@
           <div class="half2"><div>
 
             <hr>
-            <p><strong>Q7: History of febrile seizures</strong></p>
+            <p><strong>History of febrile seizures</strong></p>
             <div class="radios">
               <input type="radio" name="histfeb" value="negative" id="hf_neg" checked>
               <label class="radio shadow noselect clickable" for="hf_neg">Negative</label>
@@ -75,7 +76,7 @@
             </div>
 
             <hr>
-            <p><strong>Q8: Total number of seizures before remission</strong></p>
+            <p><strong>Total number of seizures before remission</strong></p>
             <div class="radios">
               <input type="radio" name="nseizures" value="0-9" id="ns_low" checked>
               <label class="radio shadow noselect clickable" for="ns_low">0–9</label>
@@ -84,7 +85,7 @@
             </div>
 
             <hr>
-            <p><strong>Q9: Self-limiting epilepsy syndrome (e.g. childhood absence, Rolandic)</strong></p>
+            <p><strong>Self-limiting epilepsy syndrome (e.g. absence-, or Rolandic epilepsy, Panayiotopoulos syndrome)</strong></p>
             <div class="radios">
               <input type="radio" name="benign" value="no" id="ben_no" checked>
               <label class="radio shadow noselect clickable" for="ben_no">No</label>
@@ -93,7 +94,7 @@
             </div>
 
             <hr>
-            <p><strong>Q10: Developmental delay (IQ or DQ &lt; 70)</strong></p>
+            <p><strong>Developmental delay (IQ or DQ &lt; 70)</strong></p>
             <div class="radios">
               <input type="radio" name="delay" value="no" id="del_no" checked>
               <label class="radio shadow noselect clickable" for="del_no">No</label>
@@ -102,7 +103,7 @@
             </div>
 
             <hr>
-            <p><strong>Q11: Focal seizures</strong></p>
+            <p><strong>Focal seizures</strong></p>
             <div class="radios">
               <input type="radio" name="focal" value="no" id="foc_no" checked>
               <label class="radio shadow noselect clickable" for="foc_no">No</label>
@@ -111,7 +112,7 @@
             </div>
 
             <hr>
-            <p><strong>Q12: EEG before AED withdrawal</strong></p>
+            <p><strong>EEG before AED withdrawal</strong></p>
             <div class="radios">
               <input type="radio" name="EEG" value="normal" id="eeg_n" checked>
               <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
