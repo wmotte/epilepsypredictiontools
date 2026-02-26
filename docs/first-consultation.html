@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Consultation — Epilepsy Prediction Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainwrapper">
+
+    <div id="header" class="shadow">
+      <table><tr>
+        <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
+        <td><h1 class="noselect nocursor">First Consultation (FSC)</h1></td>
+        <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
+      </tr></table>
+    </div>
+
+    <div id="content">
+      <div class="contentblock shadow">
+        <p>This calculator estimates the probability of an epilepsy diagnosis after a first unprovoked seizure, based on clinical features at first consultation.</p>
+
+        <form id="mainform">
+          <div class="half1"><div>
+
+            <hr>
+            <p><strong>Q1: Sex</strong></p>
+            <div class="radios">
+              <input type="radio" name="sexmale" value="yes" id="sx_m" checked>
+              <label class="radio shadow noselect clickable" for="sx_m">Male</label>
+              <input type="radio" name="sexmale" value="no" id="sx_f">
+              <label class="radio shadow noselect clickable" for="sx_f">Female</label>
+            </div>
+
+            <hr>
+            <p><strong>Q2: Age at first event</strong></p>
+            <input type="number" name="agefirstevent" id="agefirstevent" placeholder="10" min="0" max="18" class="shadow">
+            <span class="unit">years (0–18)</span>
+
+            <hr>
+            <p><strong>Q3: Bilateral clonic or tonic-clonic movements</strong></p>
+            <div class="radios">
+              <input type="radio" name="bilateral" value="no" id="bi_no" checked>
+              <label class="radio shadow noselect clickable" for="bi_no">No</label>
+              <input type="radio" name="bilateral" value="yes" id="bi_yes">
+              <label class="radio shadow noselect clickable" for="bi_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q4: Cramp-like movements</strong></p>
+            <div class="radios">
+              <input type="radio" name="cramp" value="no" id="cr_no" checked>
+              <label class="radio shadow noselect clickable" for="cr_no">No</label>
+              <input type="radio" name="cramp" value="yes" id="cr_yes">
+              <label class="radio shadow noselect clickable" for="cr_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q5: Lateralisation of the event</strong></p>
+            <div class="radios">
+              <input type="radio" name="lateralization" value="no" id="lat_no" checked>
+              <label class="radio shadow noselect clickable" for="lat_no">No</label>
+              <input type="radio" name="lateralization" value="yes" id="lat_yes">
+              <label class="radio shadow noselect clickable" for="lat_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q6: Loss of muscle tone</strong></p>
+            <div class="radios">
+              <input type="radio" name="lossTonus" value="no" id="lt_no" checked>
+              <label class="radio shadow noselect clickable" for="lt_no">No</label>
+              <input type="radio" name="lossTonus" value="yes" id="lt_yes">
+              <label class="radio shadow noselect clickable" for="lt_yes">Yes</label>
+            </div>
+
+          </div></div>
+
+          <div class="half2"><div>
+
+            <hr>
+            <p><strong>Q7: Automatisms during the event</strong></p>
+            <div class="radios">
+              <input type="radio" name="automatism" value="no" id="au_no" checked>
+              <label class="radio shadow noselect clickable" for="au_no">No</label>
+              <input type="radio" name="automatism" value="yes" id="au_yes">
+              <label class="radio shadow noselect clickable" for="au_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q8: Neurological history</strong></p>
+            <div class="radios">
+              <input type="radio" name="history_neurological" value="no" id="hn_no" checked>
+              <label class="radio shadow noselect clickable" for="hn_no">No</label>
+              <input type="radio" name="history_neurological" value="yes" id="hn_yes">
+              <label class="radio shadow noselect clickable" for="hn_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q9: Psychiatric history</strong></p>
+            <div class="radios">
+              <input type="radio" name="history_psychiatric" value="no" id="hp_no" checked>
+              <label class="radio shadow noselect clickable" for="hp_no">No</label>
+              <input type="radio" name="history_psychiatric" value="yes" id="hp_yes">
+              <label class="radio shadow noselect clickable" for="hp_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q10: Epileptic syndrome suspected</strong></p>
+            <div class="radios">
+              <input type="radio" name="syndrome" value="no" id="syn_no" checked>
+              <label class="radio shadow noselect clickable" for="syn_no">No</label>
+              <input type="radio" name="syndrome" value="yes" id="syn_yes">
+              <label class="radio shadow noselect clickable" for="syn_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q11: EEG result</strong></p>
+            <div class="radios">
+              <input type="radio" name="eeg_result" value="normal" id="eeg_n" checked>
+              <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
+              <input type="radio" name="eeg_result" value="generalizedEpi" id="eeg_ge">
+              <label class="radio shadow noselect clickable" for="eeg_ge">Generalised epileptiform</label>
+              <input type="radio" name="eeg_result" value="localizedEpi" id="eeg_le">
+              <label class="radio shadow noselect clickable" for="eeg_le">Localised epileptiform</label>
+              <input type="radio" name="eeg_result" value="hypofunctional" id="eeg_hf">
+              <label class="radio shadow noselect clickable" for="eeg_hf">Hypofunctional</label>
+            </div>
+
+          </div></div>
+          <div class="cleared"></div>
+        </form>
+      </div>
+
+      <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
+
+      <div id="calcButton" class="button shadow blue clickable noselect">
+        <h2 class="centertext">Calculate</h2>
+      </div>
+    </div>
+
+    <!-- Hidden modal content -->
+    <div style="display:none;">
+      <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
+      <div id="popupContent">
+        <div class="popcontent">
+          <p>This lookup table is based on clinical data and an interictal EEG from children available at first consultation after one or more paroxysmal events at the outpatient department of pediatric neurology at the UMC Utrecht, the Netherlands, and was validated on a similar cohort from the Martini Hospital in Groningen. The calculator estimates the probability that the diagnosis of epilepsy will be made based on the available information at the first consultation.</p>
+          <p><strong>Reference:</strong></p>
+          <p>van Diessen E, Lamberink HJ, Otte WM, Doornebal N, Brouwer OF, Jansen FE, Braun KPJ. A Prediction Model to Determine Childhood Epilepsy After 1 or More Paroxysmal Events. <em>Pediatrics</em> 2018; 142(6):e20180931. DOI: <a href="https://doi.org/10.1542/peds.2018-0931" target="_blank">10.1542/peds.2018-0931</a></p>
+          <p><strong>Disclaimer:</strong> For research and educational purposes only. Use clinical judgment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="noselect nocursor">
+      <p>&copy; UMC Utrecht</p>
+    </div>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/fsc-calc.js"></script>
+</body>
+</html>

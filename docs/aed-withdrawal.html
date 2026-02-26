@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AED Withdrawal Risk — Epilepsy Prediction Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainwrapper">
+
+    <div id="header" class="shadow">
+      <table><tr>
+        <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
+        <td><h1 class="noselect nocursor">AED Withdrawal Risk</h1></td>
+        <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
+      </tr></table>
+    </div>
+
+    <div id="content">
+      <div class="contentblock shadow">
+        <p>This nomogram estimates the risk of seizure recurrence after AED withdrawal in patients with epilepsy who are in remission. It also estimates long-term seizure freedom.</p>
+
+        <form id="mainform">
+          <div class="half1"><div>
+
+            <hr>
+            <p><strong>Q1: Duration of epilepsy before remission</strong></p>
+            <input type="number" name="duration" id="duration" placeholder="0" min="0" max="40" class="shadow">
+            <span class="unit">years (0–40)</span>
+
+            <hr>
+            <p><strong>Q2: Time since last seizure (at time of withdrawal)</strong></p>
+            <input type="number" name="ttr" id="ttr" placeholder="0" min="0" max="24" class="shadow">
+            <span class="unit">years (0–24)</span>
+
+            <hr>
+            <p><strong>Q3: Number of AEDs at time of withdrawal</strong></p>
+            <input type="number" name="naed" id="naed" placeholder="1" min="0" max="9" class="shadow">
+
+            <hr>
+            <p><strong>Q4: Age at onset of epilepsy</strong></p>
+            <input type="number" name="ageonset" id="ageonset" placeholder="10" min="0" max="80" class="shadow">
+            <span class="unit">years (0–80)</span>
+
+            <hr>
+            <p><strong>Q5: Sex</strong></p>
+            <div class="radios">
+              <input type="radio" name="sex" value="male" id="sex_m" checked>
+              <label class="radio shadow noselect clickable" for="sex_m">Male</label>
+              <input type="radio" name="sex" value="female" id="sex_f">
+              <label class="radio shadow noselect clickable" for="sex_f">Female</label>
+            </div>
+
+            <hr>
+            <p><strong>Q6: Family history of epilepsy (1st or 2nd degree)</strong></p>
+            <div class="radios">
+              <input type="radio" name="famhist" value="negative" id="fh_neg" checked>
+              <label class="radio shadow noselect clickable" for="fh_neg">Negative</label>
+              <input type="radio" name="famhist" value="positive" id="fh_pos">
+              <label class="radio shadow noselect clickable" for="fh_pos">Positive</label>
+            </div>
+
+          </div></div>
+
+          <div class="half2"><div>
+
+            <hr>
+            <p><strong>Q7: History of febrile seizures</strong></p>
+            <div class="radios">
+              <input type="radio" name="histfeb" value="negative" id="hf_neg" checked>
+              <label class="radio shadow noselect clickable" for="hf_neg">Negative</label>
+              <input type="radio" name="histfeb" value="positive" id="hf_pos">
+              <label class="radio shadow noselect clickable" for="hf_pos">Positive</label>
+            </div>
+
+            <hr>
+            <p><strong>Q8: Total number of seizures before remission</strong></p>
+            <div class="radios">
+              <input type="radio" name="nseizures" value="0-9" id="ns_low" checked>
+              <label class="radio shadow noselect clickable" for="ns_low">0–9</label>
+              <input type="radio" name="nseizures" value="10 or more" id="ns_high">
+              <label class="radio shadow noselect clickable" for="ns_high">10 or more</label>
+            </div>
+
+            <hr>
+            <p><strong>Q9: Self-limiting epilepsy syndrome (e.g. childhood absence, Rolandic)</strong></p>
+            <div class="radios">
+              <input type="radio" name="benign" value="no" id="ben_no" checked>
+              <label class="radio shadow noselect clickable" for="ben_no">No</label>
+              <input type="radio" name="benign" value="yes" id="ben_yes">
+              <label class="radio shadow noselect clickable" for="ben_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q10: Developmental delay (IQ or DQ &lt; 70)</strong></p>
+            <div class="radios">
+              <input type="radio" name="delay" value="no" id="del_no" checked>
+              <label class="radio shadow noselect clickable" for="del_no">No</label>
+              <input type="radio" name="delay" value="yes" id="del_yes">
+              <label class="radio shadow noselect clickable" for="del_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q11: Focal seizures</strong></p>
+            <div class="radios">
+              <input type="radio" name="focal" value="no" id="foc_no" checked>
+              <label class="radio shadow noselect clickable" for="foc_no">No</label>
+              <input type="radio" name="focal" value="yes" id="foc_yes">
+              <label class="radio shadow noselect clickable" for="foc_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q12: EEG before AED withdrawal</strong></p>
+            <div class="radios">
+              <input type="radio" name="EEG" value="normal" id="eeg_n" checked>
+              <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
+              <input type="radio" name="EEG" value="not performed" id="eeg_np">
+              <label class="radio shadow noselect clickable" for="eeg_np">Not performed</label>
+              <input type="radio" name="EEG" value="epileptiform abnormality" id="eeg_ea">
+              <label class="radio shadow noselect clickable" for="eeg_ea">Epileptiform abnormality</label>
+            </div>
+
+          </div></div>
+          <div class="cleared"></div>
+        </form>
+      </div>
+
+      <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
+
+      <div id="calcButton" class="button shadow blue clickable noselect">
+        <h2 class="centertext">Calculate</h2>
+      </div>
+    </div>
+
+    <!-- Hidden modal content -->
+    <div style="display:none;">
+      <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
+      <div id="popupContent">
+        <div class="popcontent">
+          <p>This lookup table is based on clinical nomograms from an independent participant data meta-analysis which aimed to create tools for individualized prediction of risks. The nomogram estimates the risk of seizure recurrence and long-term seizure outcome for people with epilepsy who are currently seizure-free, in case of withdrawal of anti-epileptic drugs with the purpose of discontinuing treatment. The prediction model is based on &mdash; and validated in &mdash; ten different populations of both children and adults. The tool does not apply to people who became seizure-free through epilepsy surgery.</p>
+          <p><strong>Reference:</strong></p>
+          <p>Lamberink HJ, Otte WM, Geerts AT, Pavlovic M, Ramos-Lizana J, Marson AG, Overweg J, Sauma L, Specchio LM, Tennison M, Cardoso TMO, Shinnar S, Schmidt D, Geleijns K, Braun KPJ. Individualised prediction model of seizure recurrence and long-term outcomes after withdrawal of antiepileptic drugs in seizure-free patients &ndash; a systematic review and individual participant data meta-analysis. <em>Lancet Neurology</em> 2017; 16(7):523&ndash;531. DOI: <a href="https://doi.org/10.1016/S1474-4422(17)30114-X" target="_blank">10.1016/S1474-4422(17)30114-X</a></p>
+          <p><strong>Disclaimer:</strong> For research and educational purposes only. Always use clinical judgment when making treatment decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="noselect nocursor">
+      <p>&copy; UMC Utrecht</p>
+    </div>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/aed-calc.js"></script>
+</body>
+</html>

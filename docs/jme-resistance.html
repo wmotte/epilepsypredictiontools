@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JME Drug Resistance — Epilepsy Prediction Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainwrapper">
+
+    <div id="header" class="shadow">
+      <table><tr>
+        <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
+        <td><h1 class="noselect nocursor">JME Drug Resistance</h1></td>
+        <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
+      </tr></table>
+    </div>
+
+    <div id="content">
+      <div class="contentblock shadow">
+        <p>This calculator predicts the probability of drug-resistant Juvenile Myoclonic Epilepsy (JME), based on clinical characteristics. Drug resistance is defined as failure of two adequate AED trials.</p>
+
+        <form id="mainform">
+          <div class="half1"><div>
+
+            <hr>
+            <p><strong>Q1: Ethnicity</strong></p>
+            <div class="radios">
+              <input type="radio" name="ethnicity" value="Caucasian" id="eth_c" checked>
+              <label class="radio shadow noselect clickable" for="eth_c">Caucasian</label>
+              <input type="radio" name="ethnicity" value="Asian" id="eth_a">
+              <label class="radio shadow noselect clickable" for="eth_a">Asian</label>
+              <input type="radio" name="ethnicity" value="Latin-American" id="eth_l">
+              <label class="radio shadow noselect clickable" for="eth_l">Latin-American</label>
+              <input type="radio" name="ethnicity" value="Other" id="eth_o">
+              <label class="radio shadow noselect clickable" for="eth_o">Other</label>
+            </div>
+
+            <hr>
+            <p><strong>Q2: History of febrile seizures</strong></p>
+            <div class="radios">
+              <input type="radio" name="histfebrseiz" value="no" id="hf_no" checked>
+              <label class="radio shadow noselect clickable" for="hf_no">No</label>
+              <input type="radio" name="histfebrseiz" value="yes" id="hf_yes">
+              <label class="radio shadow noselect clickable" for="hf_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q3: Status epilepticus (ever)</strong></p>
+            <div class="radios">
+              <input type="radio" name="statusepilep" value="never" id="se_n" checked>
+              <label class="radio shadow noselect clickable" for="se_n">Never</label>
+              <input type="radio" name="statusepilep" value="ever" id="se_e">
+              <label class="radio shadow noselect clickable" for="se_e">Ever</label>
+            </div>
+
+            <hr>
+            <p><strong>Q4: Psychiatric comorbidity</strong></p>
+            <div class="radios">
+              <input type="radio" name="psychcomorb" value="no" id="pc_no" checked>
+              <label class="radio shadow noselect clickable" for="pc_no">No</label>
+              <input type="radio" name="psychcomorb" value="yes" id="pc_yes">
+              <label class="radio shadow noselect clickable" for="pc_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q5: Family history of JME or epilepsy</strong></p>
+            <div class="radios">
+              <input type="radio" name="familyhistory" value="no" id="fh_no" checked>
+              <label class="radio shadow noselect clickable" for="fh_no">No</label>
+              <input type="radio" name="familyhistory" value="yes" id="fh_yes">
+              <label class="radio shadow noselect clickable" for="fh_yes">Yes</label>
+            </div>
+
+          </div></div>
+
+          <div class="half2"><div>
+
+            <hr>
+            <p><strong>Q6: Three JME seizure types (myoclonic, absence, GTCS)</strong></p>
+            <div class="radios">
+              <input type="radio" name="threetypes" value="no" id="tt_no" checked>
+              <label class="radio shadow noselect clickable" for="tt_no">No</label>
+              <input type="radio" name="threetypes" value="yes" id="tt_yes">
+              <label class="radio shadow noselect clickable" for="tt_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q7: Catamenial pattern (seizures relate to menstrual cycle)</strong></p>
+            <div class="radios">
+              <input type="radio" name="catamenial" value="no" id="cat_no" checked>
+              <label class="radio shadow noselect clickable" for="cat_no">No</label>
+              <input type="radio" name="catamenial" value="yes" id="cat_yes">
+              <label class="radio shadow noselect clickable" for="cat_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q8: EEG focality (focal or asymmetric discharges)</strong></p>
+            <div class="radios">
+              <input type="radio" name="eegfocality" value="no" id="ef_no" checked>
+              <label class="radio shadow noselect clickable" for="ef_no">No</label>
+              <input type="radio" name="eegfocality" value="yes" id="ef_yes">
+              <label class="radio shadow noselect clickable" for="ef_yes">Yes</label>
+            </div>
+
+            <hr>
+            <p><strong>Q9: CAE (childhood absence epilepsy) history before JME</strong></p>
+            <div class="radios">
+              <input type="radio" name="caehistory" value="no" id="cae_no" checked>
+              <label class="radio shadow noselect clickable" for="cae_no">No</label>
+              <input type="radio" name="caehistory" value="yes" id="cae_yes">
+              <label class="radio shadow noselect clickable" for="cae_yes">Yes</label>
+            </div>
+
+          </div></div>
+          <div class="cleared"></div>
+        </form>
+      </div>
+
+      <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
+
+      <div id="calcButton" class="button shadow blue clickable noselect">
+        <h2 class="centertext">Calculate</h2>
+      </div>
+    </div>
+
+    <!-- Hidden modal content -->
+    <div style="display:none;">
+      <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
+      <div id="popupContent">
+        <div class="popcontent">
+          <p>These lookup tables are based on clinical nomograms from a collaborative study between the UMC Utrecht and multiple partners to identify predictors of JME outcome and develop and validate clinically applicable prediction models. This tool uses 9 clinical variables (1024 combinations) to estimate the probability of drug-resistant juvenile myoclonic epilepsy (JME). Drug resistance is defined as failure of two adequate anti-seizure medication trials.</p>
+          <p><strong>Reference:</strong></p>
+          <p>Stevelink R, Otte WM, et al. Individualised prediction of drug resistance and seizure recurrence after medication withdrawal in people with juvenile myoclonic epilepsy: a systematic review and individual participant data meta-analysis. <em>eClinicalMedicine</em> 2022; 53:101732. DOI: <a href="https://doi.org/10.1016/j.eclinm.2022.101732" target="_blank">10.1016/j.eclinm.2022.101732</a></p>
+          <p><strong>Disclaimer:</strong> For research and educational purposes only. Always use clinical judgment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="noselect nocursor">
+      <p>&copy; UMC Utrecht</p>
+    </div>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/jme-resistance-calc.js"></script>
+</body>
+</html>

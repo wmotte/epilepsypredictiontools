@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IQ &gt; 70 After Surgery — Epilepsy Prediction Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainwrapper">
+
+    <div id="header" class="shadow">
+      <table><tr>
+        <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
+        <td><h1 class="noselect nocursor">IQ &gt; 70 After Surgery</h1></td>
+        <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
+      </tr></table>
+    </div>
+
+    <div id="content">
+      <div class="contentblock shadow">
+        <p>This calculator predicts the probability that a child will have a post-operative IQ &gt; 70 after paediatric epilepsy surgery, based on pre-surgical IQ and type of surgery.</p>
+
+        <form id="mainform">
+          <div class="half1"><div>
+
+            <hr>
+            <p><strong>Q1: Pre-surgical intelligence quotient (IQ)</strong></p>
+            <input type="number" name="pre" id="pre" placeholder="100" min="41" max="140" class="shadow">
+            <span class="unit">(41–140)</span>
+
+            <hr>
+            <p><strong>Q2: Type of epilepsy surgery</strong></p>
+            <div class="radios">
+              <input type="radio" name="surgery" value="focal" id="surg_f" checked>
+              <label class="radio shadow noselect clickable" for="surg_f">Focal</label>
+              <input type="radio" name="surgery" value="multilobar" id="surg_m">
+              <label class="radio shadow noselect clickable" for="surg_m">Multilobar or hemispherectomy</label>
+            </div>
+
+          </div></div>
+          <div class="cleared"></div>
+        </form>
+      </div>
+
+      <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
+
+      <div id="calcButton" class="button shadow blue clickable noselect">
+        <h2 class="centertext">Calculate</h2>
+      </div>
+    </div>
+
+    <!-- Hidden modal content -->
+    <div style="display:none;">
+      <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
+      <div id="popupContent">
+        <div class="popcontent">
+          <p>This lookup table is based on clinical nomograms from a collaborative study between Universit&auml;tsklinik OWL and the UMC Utrecht to identify predictors of postoperative intelligence quotients (IQ) and develop and validate clinically applicable prediction models two years after pediatric epilepsy surgery. The tool estimates the probability of achieving IQ &ge; 70 post-surgery, with presurgical IQ as the strongest predictor.</p>
+          <p><strong>Reference:</strong></p>
+          <p>Cloppenborg T, van Schooneveld MMJ, Hagemann A, Hopf JL, Kalbhenn T, Otte WM, Polster T, Bien CG, Braun KPJ. Development and validation of prediction models for developmental and intellectual outcome following pediatric epilepsy surgery. <em>Neurology</em> 2022; 98:e225&ndash;e235. DOI: <a href="https://doi.org/10.1212/WNL.0000000000013065" target="_blank">10.1212/WNL.0000000000013065</a></p>
+          <p><strong>Disclaimer:</strong> For research and educational purposes only. Use clinical judgment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="noselect nocursor">
+      <p>&copy; UMC Utrecht</p>
+    </div>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/iq70-calc.js"></script>
+</body>
+</html>

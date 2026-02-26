@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTS Withdrawal Risk — Epilepsy Prediction Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainwrapper">
+
+    <div id="header" class="shadow">
+      <table><tr>
+        <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
+        <td><h1 class="noselect nocursor">TTS Withdrawal Risk</h1></td>
+        <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
+      </tr></table>
+    </div>
+
+    <div id="content">
+      <div class="contentblock shadow">
+        <p>This nomogram predicts surgical outcome (seizure recurrence, long-term seizure freedom, and cure) after epilepsy surgery. Three models are computed based on different combinations of pre-surgical variables.</p>
+
+        <form id="mainform">
+          <div class="half1"><div>
+
+            <hr>
+            <p><strong>Q1: Age at time of surgery</strong></p>
+            <input type="number" name="agewith" id="agewith" placeholder="10" min="0" max="26" class="shadow">
+            <span class="unit">years (0–26)</span>
+
+            <hr>
+            <p><strong>Q2: Time since last seizure before surgery</strong></p>
+            <input type="number" name="ttr" id="ttr" placeholder="0" min="0" max="85" class="shadow">
+            <span class="unit">months (0–85)</span>
+
+            <hr>
+            <p><strong>Q3: MRI findings</strong></p>
+            <div class="radios">
+              <input type="radio" name="mri" value="focal" id="mri_f" checked>
+              <label class="radio shadow noselect clickable" for="mri_f">Focal</label>
+              <input type="radio" name="mri" value="multifocal" id="mri_mf">
+              <label class="radio shadow noselect clickable" for="mri_mf">Multifocal</label>
+              <input type="radio" name="mri" value="normal" id="mri_n">
+              <label class="radio shadow noselect clickable" for="mri_n">Normal</label>
+            </div>
+
+            <hr>
+            <p><strong>Q4: Completeness of anatomical lesion resection</strong></p>
+            <div class="radios">
+              <input type="radio" name="complete" value="complete" id="comp_c" checked>
+              <label class="radio shadow noselect clickable" for="comp_c">Complete</label>
+              <input type="radio" name="complete" value="incomplete" id="comp_i">
+              <label class="radio shadow noselect clickable" for="comp_i">Incomplete</label>
+              <input type="radio" name="complete" value="not determined" id="comp_nd">
+              <label class="radio shadow noselect clickable" for="comp_nd">Not determined</label>
+            </div>
+
+          </div></div>
+
+          <div class="half2"><div>
+
+            <hr>
+            <p><strong>Q5: Daily seizure frequency before surgery</strong></p>
+            <input type="number" name="sfreq" id="sfreq" placeholder="1" min="0" max="24" step="0.1" class="shadow">
+            <span class="unit">per day (0–24)</span>
+
+            <hr>
+            <p><strong>Q6: Number of AEDs at time of surgery</strong></p>
+            <input type="number" name="naed" id="naed" placeholder="2" min="0" max="5" class="shadow">
+            <span class="unit">(0–5)</span>
+
+            <hr>
+            <p><strong>Q7: EEG before surgery</strong></p>
+            <div class="radios">
+              <input type="radio" name="eeg" value="normal" id="eeg_n" checked>
+              <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
+              <input type="radio" name="eeg" value="not performed" id="eeg_np">
+              <label class="radio shadow noselect clickable" for="eeg_np">Not performed</label>
+              <input type="radio" name="eeg" value="interictal epileptiform discharges" id="eeg_ied">
+              <label class="radio shadow noselect clickable" for="eeg_ied">Interictal epileptiform discharges</label>
+            </div>
+
+            <hr>
+            <p><strong>Q8: Aetiology</strong></p>
+            <div class="radios">
+              <input type="radio" name="aetiol" value="tumor" id="ae_t" checked>
+              <label class="radio shadow noselect clickable" for="ae_t">Tumor</label>
+              <input type="radio" name="aetiol" value="malformation of cortical development" id="ae_mcd">
+              <label class="radio shadow noselect clickable" for="ae_mcd">MCD</label>
+              <input type="radio" name="aetiol" value="mesiotemporal sclerosis" id="ae_mts">
+              <label class="radio shadow noselect clickable" for="ae_mts">MTS</label>
+              <input type="radio" name="aetiol" value="vascular lesion" id="ae_v">
+              <label class="radio shadow noselect clickable" for="ae_v">Vascular</label>
+              <input type="radio" name="aetiol" value="rasmussen encephalitis" id="ae_r">
+              <label class="radio shadow noselect clickable" for="ae_r">Rasmussen</label>
+              <input type="radio" name="aetiol" value="other" id="ae_o">
+              <label class="radio shadow noselect clickable" for="ae_o">Other</label>
+            </div>
+
+          </div></div>
+          <div class="cleared"></div>
+        </form>
+      </div>
+
+      <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
+
+      <div id="calcButton" class="button shadow blue clickable noselect">
+        <h2 class="centertext">Calculate</h2>
+      </div>
+    </div>
+
+    <!-- Hidden modal content -->
+    <div style="display:none;">
+      <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
+      <div id="popupContent">
+        <div class="popcontent">
+          <p>This simple retrieval tool is based on clinical nomograms from the TimeToStop study group. It estimates the risk of seizure recurrence and long-term seizure outcome for children with epilepsy who underwent epilepsy surgery, in case of withdrawal of antiepileptic drugs with the purpose of discontinuing treatment. The prediction model is based on data from 766 children who underwent epilepsy surgery in 15 centres in 8 European countries.</p>
+          <p><strong>Reference:</strong></p>
+          <p>Lamberink HJ, Boshuisen K, Otte WM, Geleijns K, Braun KPJ, on behalf of the TimeToStop Study Group. Individualized prediction of seizure relapse and outcomes following antiepileptic drug withdrawal after pediatric epilepsy surgery. <em>Epilepsia</em> 2018. DOI: <a href="https://doi.org/10.1111/epi.14020" target="_blank">10.1111/epi.14020</a></p>
+          <p><strong>Disclaimer:</strong> For research and educational purposes only. Always use clinical judgment when making treatment decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="noselect nocursor">
+      <p>&copy; UMC Utrecht</p>
+    </div>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/tts-calc.js"></script>
+</body>
+</html>
