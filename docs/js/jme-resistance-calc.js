@@ -1054,7 +1054,7 @@
       + '<p style="margin-bottom:8px; font-weight:bold;">Predicted probability of drug-resistant JME</p>'
       + '<p style="font-size:3em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + pct.toFixed(1) + '%</p>'
       + '</div>'
-      + '<p class="result-note">For educational purposes only. Use clinical judgment.</p>';
+      + '<p class="result-note">For research and clinical decision support only. Always use clinical judgment..</p>';
     window.UI.showResult(html);
   }
 
