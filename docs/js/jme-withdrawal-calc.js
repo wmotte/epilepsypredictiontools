@@ -2092,7 +2092,7 @@
       + '</table>'
       + '</div>'
       + '<p class="result-note">Based on age at withdrawal=' + age + ' years, seizure-free interval=' + sf + ' years, ASMs=' + asm + '</p>'
-      + '<p class="result-note">For educational purposes only. Use clinical judgment.</p>';
+      + '<p class="result-note">For research and clinical decision support only. Always use clinical judgment.</p>';
     window.UI.showResult(html);
   }
 
