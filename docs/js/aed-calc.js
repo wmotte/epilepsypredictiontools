@@ -214,6 +214,7 @@
       + '<div class="result"><p>5-year seizure recurrence risk</p><p class="value">' + r5y + '%</p></div>'
       + '<div class="result"><p>10-year chance of seizure-freedom (seizure-free for at least 1 year)</p><p class="value">' + rLong + '%</p></div>'
       + '</div>'
+      + '<p class="result-note">Seizure-freedom is defined as in Lamberink et al. (Lancet Neurology 2017): no seizures in the last year of follow-up after AED withdrawal.</p>'
       + '<p class="result-note">Please note that even after seizure recurrence a patient can become seizure free again. Hence, the chance of seizure freedom at ten years is higher than the chance of not having a seizure recurrence.</p>'
       + '<p class="result-note">Results are based on population-level data and should complement, not replace, clinical judgment.</p>';
 
