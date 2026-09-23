@@ -409,7 +409,7 @@
     var surgery  = document.querySelector('[name="surgery"]:checked').value;
     var invasive = document.querySelector('[name="invasive"]:checked').value;
 
-    if (isNaN(pre)) { window.UI.showResult('<p class="error">Please enter a valid pre-operative IQ.</p>'); return; }
+    if (isNaN(pre)) { window.UI.showResult('<p class="error">Please enter a valid pre-surgical IQ.</p>'); return; }
     pre = Math.max(41, Math.min(140, pre));
 
     var key  = pre + '|' + surgery + '|' + invasive;
@@ -422,10 +422,10 @@
 
     var pct = Math.round(100 * prob * 10) / 10;
     var html = '<div style="text-align:center; padding:20px 10px;">'
-      + '<p style="margin-bottom:8px; font-weight:bold;">Predicted probability of post-operative IQ &gt; 85</p>'
+      + '<p style="margin-bottom:8px; font-weight:bold;">2-year probability IQ &ge; 85</p>'
       + '<p style="font-size:3em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + pct.toFixed(1) + '%</p>'
       + '</div>'
-      + '<p class="result-note">Based on pre-operative IQ=' + pre + ', surgery=' + surgery + ', invasive=' + invasive + '</p>'
+      + '<p class="result-note">Based on pre-surgical IQ=' + pre + ', surgery=' + surgery + ', invasive=' + invasive + '</p>'
       + '<p class="result-note">For educational purposes only. Use clinical judgment.</p>';
     window.UI.showResult(html);
   }

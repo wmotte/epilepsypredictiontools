@@ -1049,12 +1049,12 @@
       return;
     }
 
-    var pct = Math.round(100 * prob * 10) / 10;
+    var pct = Math.round(100 * prob); // original PHP rounded to whole percentages
     var html = '<div style="text-align:center; padding:20px 10px;">'
-      + '<p style="margin-bottom:8px; font-weight:bold;">Predicted probability of drug-resistant JME</p>'
-      + '<p style="font-size:3em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + pct.toFixed(1) + '%</p>'
+      + '<p style="margin-bottom:8px; font-weight:bold;">Probability of drug resistance</p>'
+      + '<p style="font-size:3em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + pct + '%</p>'
       + '</div>'
-      + '<p class="result-note">For research and clinical decision support only. Always use clinical judgment..</p>';
+      + '<p class="result-note">For research and clinical decision support only. Always use clinical judgment.</p>';
     window.UI.showResult(html);
   }
 

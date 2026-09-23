@@ -168,7 +168,7 @@
     var pre = parseInt(document.querySelector('[name="pre"]').value, 10);
     var mcd = document.querySelector('[name="mcd"]:checked').value;
 
-    if (isNaN(pre)) { window.UI.showResult('<p class="error">Please enter a valid pre-operative DQ.</p>'); return; }
+    if (isNaN(pre)) { window.UI.showResult('<p class="error">Please enter a valid pre-surgical DQ.</p>'); return; }
     pre = Math.max(1, Math.min(80, pre));
 
     var key  = pre + '|' + mcd;
@@ -181,10 +181,10 @@
 
     var pct = Math.round(100 * prob * 10) / 10;
     var html = '<div style="text-align:center; padding:20px 10px;">'
-      + '<p style="margin-bottom:8px; font-weight:bold;">Predicted probability of post-operative DQ &gt; 50</p>'
+      + '<p style="margin-bottom:8px; font-weight:bold;">2-year probability DQ &ge; 50</p>'
       + '<p style="font-size:3em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + pct.toFixed(1) + '%</p>'
       + '</div>'
-      + '<p class="result-note">Based on pre-operative DQ=' + pre + ', MCD=' + mcd + '</p>'
+      + '<p class="result-note">Based on pre-surgical DQ=' + pre + ', MCD=' + mcd + '</p>'
       + '<p class="result-note">For educational purposes only. Use clinical judgment.</p>';
     window.UI.showResult(html);
   }

@@ -12,7 +12,7 @@ Clinical prediction calculators for epilepsy management, developed at **UMC Utre
 
 | Calculator | Method | Reference |
 |---|---|---|
-| [First Consultation (FSC)](https://wmotte.github.io/epilepsypredictiontools/first-consultation.html) | Logistic regression | van Diessen et al., *Pediatrics* 2018 |
+| [Epilepsy probability (first consultation)](https://wmotte.github.io/epilepsypredictiontools/first-consultation.html) | Logistic regression | van Diessen et al., *Pediatrics* 2018 |
 
 Estimates the probability of an epilepsy diagnosis after one or more paroxysmal events at first consultation, based on 11 clinical and EEG parameters. Developed and validated at UMC Utrecht and the Martini Hospital Groningen.
 
@@ -22,9 +22,9 @@ Estimates the probability of an epilepsy diagnosis after one or more paroxysmal 
 
 | Calculator | Method | Reference |
 |---|---|---|
-| [AED Withdrawal Risk](https://wmotte.github.io/epilepsypredictiontools/aed-withdrawal.html) | Nomogram | Lamberink et al., *Lancet Neurology* 2017 |
+| [AED withdrawal risk retrieval](https://wmotte.github.io/epilepsypredictiontools/aed-withdrawal.html) | Nomogram | Lamberink et al., *Lancet Neurology* 2017 |
 
-Predicts 2-year and 5-year seizure recurrence risk and long-term seizure freedom for patients with epilepsy in remission who are considering AED withdrawal. Based on an individual participant data meta-analysis of ten populations (children and adults). Does **not** apply to patients who became seizure-free through epilepsy surgery.
+Predicts the 2-year and 5-year seizure recurrence risk and the 10-year chance of seizure-freedom (seizure-free for at least 1 year) for patients with epilepsy in remission who are considering AED withdrawal. Based on an individual participant data meta-analysis of ten populations (children and adults). Does **not** apply to patients who became seizure-free through epilepsy surgery.
 
 ---
 
@@ -32,14 +32,14 @@ Predicts 2-year and 5-year seizure recurrence risk and long-term seizure freedom
 
 | Calculator | Method | Reference |
 |---|---|---|
-| [TTS Postoperative Withdrawal Risk](https://wmotte.github.io/epilepsypredictiontools/tts-withdrawal.html) | Nomogram (3 models) | Lamberink et al., *Epilepsia* 2018 |
-| [IQ ≥ 85 After Surgery](https://wmotte.github.io/epilepsypredictiontools/iq85.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
-| [IQ ≥ 70 After Surgery](https://wmotte.github.io/epilepsypredictiontools/iq70.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
-| [DQ ≥ 50 After Surgery](https://wmotte.github.io/epilepsypredictiontools/dq50.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
+| [Postoperative AED withdrawal risk retrieval](https://wmotte.github.io/epilepsypredictiontools/tts-withdrawal.html) | Nomogram (3 models) | Lamberink et al., *Epilepsia* 2018 |
+| [Intellectual Quotient ≥ 85](https://wmotte.github.io/epilepsypredictiontools/iq85.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
+| [Intellectual Quotient ≥ 70](https://wmotte.github.io/epilepsypredictiontools/iq70.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
+| [Developmental Quotient ≥ 50](https://wmotte.github.io/epilepsypredictiontools/dq50.html) | Lookup table | Cloppenborg et al., *Neurology* 2022 |
 
-**TTS:** Predicts seizure recurrence and long-term outcome after AED withdrawal in children following epilepsy surgery (TimeToStop study, 766 children, 15 centres, 8 European countries). Three models: 2-year/5-year recurrence, long-term freedom, and cure probability.
+**Postoperative AED withdrawal:** Predicts seizure recurrence and seizure freedom after AED withdrawal in children following epilepsy surgery (TimeToStop study, 766 children, 15 centres, 8 European countries). Shows the 2-year and 5-year seizure recurrence risk and the 6-year chance of seizure-freedom (Engel 1 for at least 1 year). The cure model (6-year chance of being seizure- and AED-free) is computed but not displayed, as on the original site.
 
-**IQ/DQ:** Predicts post-operative cognitive outcome two years after pediatric epilepsy surgery, using pre-surgical IQ or DQ as the primary predictor. Collaborative study between Universitätsklinik OWL and UMC Utrecht.
+**IQ/DQ:** Predicts the 2-year probability of IQ ≥ 85, IQ ≥ 70 or DQ ≥ 50 after pediatric epilepsy surgery, using pre-surgical IQ or DQ as the primary predictor. Collaborative study between Universitätsklinik OWL and UMC Utrecht.
 
 ---
 
@@ -47,14 +47,14 @@ Predicts 2-year and 5-year seizure recurrence risk and long-term seizure freedom
 
 | Calculator | Method | Reference |
 |---|---|---|
-| [JME AED Withdrawal](https://wmotte.github.io/epilepsypredictiontools/jme-withdrawal.html) | Lookup table | Stevelink et al., *eClinicalMedicine* 2022 |
-| [JME Drug Resistance](https://wmotte.github.io/epilepsypredictiontools/jme-resistance.html) | Lookup table | Stevelink et al., *eClinicalMedicine* 2022 |
+| [Seizure recurrence risk after drug withdrawal in JME](https://wmotte.github.io/epilepsypredictiontools/jme-withdrawal.html) | Lookup table | Stevelink et al., *eClinicalMedicine* 2022 |
+| [Risk of drug-resistant JME](https://wmotte.github.io/epilepsypredictiontools/jme-resistance.html) | Lookup table | Stevelink et al., *eClinicalMedicine* 2022 |
 
 Both calculators are based on an individual participant data meta-analysis (Stevelink et al. 2022) identifying predictors of JME treatment outcomes across multiple international cohorts.
 
-**JME Withdrawal:** Predicts 2-year and 5-year seizure recurrence probability after ASM withdrawal in JME patients who are currently seizure-free. Inputs: age at withdrawal (years), seizure-free interval (years), number of ASMs.
+**JME Withdrawal:** Predicts the 2-year and 5-year seizure recurrence risk after AED withdrawal in people with JME who are currently seizure-free. Inputs: age at start of AED reduction (years), seizure-free interval (years), number of AEDs used at start of AED reduction.
 
-**JME Drug Resistance:** Predicts the probability of drug-resistant JME (defined as failure of two adequate ASM trials) from 9 clinical variables, covering 1024 possible combinations.
+**JME Drug Resistance:** Predicts the probability of drug resistance in JME from 9 clinical variables, covering 1024 possible combinations.
 
 ---
 

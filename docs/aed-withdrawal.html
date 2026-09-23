@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AED Withdrawal Risk — Epilepsy Prediction Tools</title>
+  <title>AED withdrawal risk retrieval — Epilepsy Prediction Tools</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,14 +12,15 @@
     <div id="header" class="shadow">
       <table><tr>
         <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
-        <td><h1 class="noselect nocursor">AED Withdrawal Risk</h1></td>
+        <td><h1 class="noselect nocursor">AED withdrawal risk retrieval</h1></td>
         <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
       </tr></table>
     </div>
 
     <div id="content">
       <div class="contentblock shadow">
-        <p>This nomogram estimates the risk of seizure recurrence after AED withdrawal in patients with epilepsy who are in remission. It also estimates long-term seizure freedom. This tool does not apply after epilepsy surgery.</p>
+        <p>The antiepileptic drug (AED) withdrawal risk lookup table provides the risk of a seizure in the next 2 and 5 years after AED withdrawal, for people with epilepsy who are seizure-free thanks to AEDs. It also shows the chance to be seizure-free after 10 years.</p>
+        <p><strong>This tool does not apply after epilepsy surgery.</strong></p>
 
         <form id="mainform">
           <div class="half1"><div>
@@ -35,9 +36,9 @@
             <span class="unit">years (0–24)</span>
 
             <hr>
-            <p><strong>Number of AEDs at time of withdrawal</strong></p>
+            <p><strong>Number of AEDs</strong></p>
             <input type="number" name="naed" id="naed" placeholder="1" min="0" max="9" class="shadow">
-            <span class="unit">range (0–9)</span>
+            <span class="unit">range (1–9)</span>
 
             <hr>
             <p><strong>Age at onset of epilepsy</strong></p>
@@ -130,7 +131,7 @@
       <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
 
       <div id="calcButton" class="button shadow blue clickable noselect">
-        <h2 class="centertext">Look-up</h2>
+        <h2 class="centertext">Look up</h2>
       </div>
     </div>
 
@@ -139,7 +140,7 @@
       <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
       <div id="popupContent">
         <div class="popcontent">
-          <p>This lookup table is based on clinical nomograms from an independent participant data meta-analysis which aimed to create tools for individualized prediction of risks. The nomogram estimates the risk of seizure recurrence and long-term seizure outcome for people with epilepsy who are currently seizure-free, in case of withdrawal of anti-epileptic drugs with the purpose of discontinuing treatment. The prediction model is based on &mdash; and validated in &mdash; ten different populations of both children and adults. The tool does not apply to people who became seizure-free through epilepsy surgery.</p>
+          <p>This lookup table is based on clinical nomograms from an independent participant data meta-analysis which aimed to create tools for individualized prediction of risks [1]. The nomogram estimates the risk of seizure recurrence and long-term seizure outcome for people with epilepsy who are currently seizure-free, in case of withdrawal of anti-epileptic drugs with the purpose of discontinuing treatment. The prediction model is based on - and validated in - ten different populations of both children and adults. The tool does not apply to people who became seizure-free through epilepsy surgery.</p>
           <p><strong>Reference:</strong></p>
           <p>Lamberink HJ, Otte WM, Geerts AT, Pavlovic M, Ramos-Lizana J, Marson AG, Overweg J, Sauma L, Specchio LM, Tennison M, Cardoso TMO, Shinnar S, Schmidt D, Geleijns K, Braun KPJ. Individualised prediction model of seizure recurrence and long-term outcomes after withdrawal of antiepileptic drugs in seizure-free patients &ndash; a systematic review and individual participant data meta-analysis. <em>Lancet Neurology</em> 2017; 16(7):523&ndash;531. DOI: <a href="https://doi.org/10.1016/S1474-4422(17)30114-X" target="_blank">10.1016/S1474-4422(17)30114-X</a></p>
           <p><strong>Disclaimer:</strong> For research and educational purposes only. Always use clinical judgment when making treatment decisions.</p>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>First Consultation — Epilepsy Prediction Tools</title>
+  <title>Epilepsy probability — Epilepsy Prediction Tools</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,14 +12,14 @@
     <div id="header" class="shadow">
       <table><tr>
         <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
-        <td><h1 class="noselect nocursor">First Consultation (FSC)</h1></td>
+        <td><h1 class="noselect nocursor">Epilepsy probability</h1></td>
         <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
       </tr></table>
     </div>
 
     <div id="content">
       <div class="contentblock shadow">
-        <p>This calculator estimates the probability of an epilepsy diagnosis after a first unprovoked seizure, based on clinical features at first consultation.</p>
+        <p>After one or more paroxysmal events, what is the risk that the eventual diagnosis is epilepsy?</p>
 
         <form id="mainform">
           <div class="half1"><div>
@@ -34,7 +34,7 @@
             </div>
 
             <hr>
-            <p><strong>Age at first event</strong></p>
+            <p><strong>Age at the first event (in years)</strong></p>
             <input type="number" name="agefirstevent" id="agefirstevent" placeholder="10" min="0" max="18" class="shadow">
             <span class="unit">years (0–18)</span>
 
@@ -88,7 +88,7 @@
             </div>
 
             <hr>
-            <p><strong>History of neurological disorder? (i.e., birth asphyxia, congenital or acquired brain lesion, head trauma, central nervous system infections, migraine)</strong></p>
+            <p><strong>History of neurological disorder? (i.e. birth asphyxia, congenital or acquired brain lesion, head trauma, central nervous system infections, migraine)</strong></p>
             <div class="radios">
               <input type="radio" name="history_neurological" value="no" id="hn_no" checked>
               <label class="radio shadow noselect clickable" for="hn_no">No</label>
@@ -97,7 +97,7 @@
             </div>
 
             <hr>
-            <p><strong>History of psychiatric disorder? (i.e., autism, attention deficit (hyperactivity) disorder, other)</strong></p>
+            <p><strong>History of psychiatric disorder? (i.e. autism, attention deficit (hyperactivity) disorder, other)</strong></p>
             <div class="radios">
               <input type="radio" name="history_psychiatric" value="no" id="hp_no" checked>
               <label class="radio shadow noselect clickable" for="hp_no">No</label>
@@ -106,7 +106,7 @@
             </div>
 
             <hr>
-            <p><strong>Syndrome? (i.e., a known genetic or metabolic syndrome)</strong></p>
+            <p><strong>Syndrome? (i.e. a known genetic or metabolic syndrome)</strong></p>
             <div class="radios">
               <input type="radio" name="syndrome" value="no" id="syn_no" checked>
               <label class="radio shadow noselect clickable" for="syn_no">No</label>
@@ -115,16 +115,16 @@
             </div>
 
             <hr>
-            <p><strong>EEG result</strong></p>
+            <p><strong>EEG results</strong></p>
             <div class="radios">
               <input type="radio" name="eeg_result" value="normal" id="eeg_n" checked>
               <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
               <input type="radio" name="eeg_result" value="generalizedEpi" id="eeg_ge">
-              <label class="radio shadow noselect clickable" for="eeg_ge">Generalised epileptiform</label>
+              <label class="radio shadow noselect clickable" for="eeg_ge">Generalized epileptiform</label>
               <input type="radio" name="eeg_result" value="localizedEpi" id="eeg_le">
-              <label class="radio shadow noselect clickable" for="eeg_le">Localised epileptiform</label>
+              <label class="radio shadow noselect clickable" for="eeg_le">Localized epileptiform</label>
               <input type="radio" name="eeg_result" value="hypofunctional" id="eeg_hf">
-              <label class="radio shadow noselect clickable" for="eeg_hf">Hypofunctional</label>
+              <label class="radio shadow noselect clickable" for="eeg_hf">Aspecific abnormalities</label>
             </div>
 
           </div></div>
@@ -135,7 +135,7 @@
       <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
 
       <div id="calcButton" class="button shadow blue clickable noselect">
-        <h2 class="centertext">Look-up</h2>
+        <h2 class="centertext">Look up</h2>
       </div>
     </div>
 

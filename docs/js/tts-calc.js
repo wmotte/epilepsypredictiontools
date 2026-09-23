@@ -79,7 +79,7 @@
     74,75,76,77,78,79,81,82,83,84,85,'>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85',
     '>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85','>85'];
 
-  /* Model 2 — long-term seizure freedom (0..49, index = total*2) */
+  /* Model 2 — 6-year chance of seizure-freedom (0..49, index = total*2) */
   var RISK2_LONG = ['>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98','>98',
     '>98','>98','>98','>98','>98','>98','>98','>98','>98','>98',98,98,98,98,97,97,97,97,97,97,96,96,96,96,96,
     95,95,95,95,94,94,94,93,93,92,92,91,91,90,90,89,89,88,87,87,86,85,84,83,82,81,81,80,79,77,76,74,73,
@@ -173,12 +173,12 @@
     var rCure = lookupRisk(total3, RISK3_CURE);
 
     var html = '<div>'
-      + '<div class="result"><p>2-year seizure recurrence (Model 1)</p><p class="value">' + (r2y !== null ? r2y + '%' : 'N/A') + '</p></div>'
-      + '<div class="result"><p>5-year seizure recurrence (Model 1)</p><p class="value">' + (r5y !== null ? r5y + '%' : 'N/A') + '</p></div>'
-      + '<div class="result"><p>Long-term seizure freedom (Model 2)</p><p class="value">' + (rLong !== null ? rLong + '%' : 'N/A') + '</p></div>'
-      + '<div class="result"><p>Cure probability (Model 3)</p><p class="value">' + (rCure !== null ? rCure + '%' : 'N/A') + '</p></div>'
+      + '<div class="result"><p>2-year seizure recurrence risk</p><p class="value">' + (r2y !== null ? r2y + '%' : 'N/A') + '</p></div>'
+      + '<div class="result"><p>5-year seizure recurrence risk</p><p class="value">' + (r5y !== null ? r5y + '%' : 'N/A') + '</p></div>'
+      + '<div class="result"><p>6-year chance of seizure-freedom (Engel 1 for at least 1 year)</p><p class="value">' + (rLong !== null ? rLong + '%' : 'N/A') + '</p></div>'
+      // Cure (model 3) was computed but not shown on the original PHP site; kept hidden to match it.
+      // + '<div class="result"><p>6-year chance of cure (seizure-, and AED-free) for at least 1 year</p><p class="value">' + (rCure !== null ? rCure + '%' : 'N/A') + '</p></div>'
       + '</div>'
-      + '<p class="result-note">Model scores: M1=' + total1 + ', M2=' + total2 + ', M3=' + total3 + '</p>'
       + '<p class="result-note">Results represent population-level estimates. Always use clinical judgment.</p>';
 
     window.UI.showResult(html);

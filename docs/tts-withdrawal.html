@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TTS Withdrawal Risk — Epilepsy Prediction Tools</title>
+  <title>Postoperative AED withdrawal risk retrieval — Epilepsy Prediction Tools</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,14 +12,15 @@
     <div id="header" class="shadow">
       <table><tr>
         <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
-        <td><h1 class="noselect nocursor">TTS Withdrawal Risk</h1></td>
+        <td><h1 class="noselect nocursor">Postoperative AED withdrawal risk retrieval</h1></td>
         <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
       </tr></table>
     </div>
 
     <div id="content">
       <div class="contentblock shadow">
-        <p>This nomogram predicts surgical outcome (seizure recurrence, long-term seizure freedom, and cure) after epilepsy surgery. Three models are computed based on different combinations of pre-surgical variables.</p>
+        <h3>Antiepileptic drug withdrawal after pediatric epilepsy surgery</h3>
+        <p>Retrieval of seizure recurrence risk at 2 and 5 years and seizure freedom at 6 years.</p>
 
         <form id="mainform">
           <div class="half1"><div>
@@ -30,7 +31,7 @@
             <span class="unit">years (0–26)</span>
 
             <hr>
-            <p><strong>Time to reduction, from surgery to start AED withdrawal</strong></p>
+            <p><strong>Time to reduction, months from surgery to start AED withdrawal</strong></p>
             <input type="number" name="ttr" id="ttr" placeholder="0" min="0" max="85" class="shadow">
             <span class="unit">months (0–85)</span>
 
@@ -46,7 +47,7 @@
             </div>
 
             <hr>
-            <p><strong>Completeness of anatomical lesion resection</strong></p>
+            <p><strong>Completeness of resection of the anatomical lesion</strong></p>
             <div class="radios">
               <input type="radio" name="complete" value="complete" id="comp_c" checked>
               <label class="radio shadow noselect clickable" for="comp_c">Complete</label>
@@ -61,9 +62,9 @@
           <div class="half2"><div>
 
             <hr>
-            <p><strong>Daily seizure frequency before surgery (if above max, fill in 24)</strong></p>
+            <p><strong>Average seizure frequency per day before surgery (if more than 24/day, fill in 24)</strong></p>
             <input type="number" name="sfreq" id="sfreq" placeholder="1" min="0" max="24" step="0.1" class="shadow">
-            <span class="unit">per day (0–24)</span>
+            <span class="unit">seizures per day (0–24)</span>
 
             <hr>
             <p><strong>Number of AEDs at time of surgery</strong></p>
@@ -71,7 +72,7 @@
             <span class="unit">(0–5)</span>
 
             <hr>
-            <p><strong>EEG before surgery</strong></p>
+            <p><strong>EEG before AED withdrawal</strong></p>
             <div class="radios">
               <input type="radio" name="eeg" value="normal" id="eeg_n" checked>
               <label class="radio shadow noselect clickable" for="eeg_n">Normal</label>
@@ -82,18 +83,18 @@
             </div>
 
             <hr>
-            <p><strong>Aetiology</strong></p>
+            <p><strong>Etiology</strong></p>
             <div class="radios">
               <input type="radio" name="aetiol" value="tumor" id="ae_t" checked>
               <label class="radio shadow noselect clickable" for="ae_t">Tumor</label>
               <input type="radio" name="aetiol" value="malformation of cortical development" id="ae_mcd">
-              <label class="radio shadow noselect clickable" for="ae_mcd">MCD</label>
+              <label class="radio shadow noselect clickable" for="ae_mcd">Malformation of cortical development</label>
               <input type="radio" name="aetiol" value="mesiotemporal sclerosis" id="ae_mts">
-              <label class="radio shadow noselect clickable" for="ae_mts">MTS</label>
+              <label class="radio shadow noselect clickable" for="ae_mts">Mesiotemporal sclerosis</label>
               <input type="radio" name="aetiol" value="vascular lesion" id="ae_v">
-              <label class="radio shadow noselect clickable" for="ae_v">Vascular</label>
+              <label class="radio shadow noselect clickable" for="ae_v">Vascular lesion</label>
               <input type="radio" name="aetiol" value="rasmussen encephalitis" id="ae_r">
-              <label class="radio shadow noselect clickable" for="ae_r">Rasmussen</label>
+              <label class="radio shadow noselect clickable" for="ae_r">Rasmussen encephalitis</label>
               <input type="radio" name="aetiol" value="other" id="ae_o">
               <label class="radio shadow noselect clickable" for="ae_o">Other</label>
             </div>
@@ -106,7 +107,7 @@
       <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
 
       <div id="calcButton" class="button shadow blue clickable noselect">
-        <h2 class="centertext">Look-up</h2>
+        <h2 class="centertext">Look up</h2>
       </div>
     </div>
 
@@ -115,7 +116,7 @@
       <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
       <div id="popupContent">
         <div class="popcontent">
-          <p>This simple retrieval tool is based on clinical nomograms from the TimeToStop study group. It estimates the risk of seizure recurrence and long-term seizure outcome for children with epilepsy who underwent epilepsy surgery, in case of withdrawal of antiepileptic drugs with the purpose of discontinuing treatment. The prediction model is based on data from 766 children who underwent epilepsy surgery in 15 centres in 8 European countries.</p>
+          <p>This lookup table is based on clinical nomograms from the TimeToStop study group [1]. The nomogram estimates the risk of seizure recurrence and long-term seizure outcome for children with epilepsy who underwent epilepsy surgery, in case of withdrawal of antiepileptic drugs with the purpose of discontinuing treatment. The prediction model is based on data from 766 children who underwent epilepsy surgery in 15 centres in 8 European countries.</p>
           <p><strong>Reference:</strong></p>
           <p>Lamberink HJ, Boshuisen K, Otte WM, Geleijns K, Braun KPJ, on behalf of the TimeToStop Study Group. Individualized prediction of seizure relapse and outcomes following antiepileptic drug withdrawal after pediatric epilepsy surgery. <em>Epilepsia</em> 2018. DOI: <a href="https://doi.org/10.1111/epi.14020" target="_blank">10.1111/epi.14020</a></p>
           <p><strong>Disclaimer:</strong> For research and educational purposes only. Always use clinical judgment when making treatment decisions.</p>

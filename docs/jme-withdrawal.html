@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JME AED Withdrawal — Epilepsy Prediction Tools</title>
+  <title>Seizure recurrence risk after drug withdrawal in JME — Epilepsy Prediction Tools</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,25 +12,25 @@
     <div id="header" class="shadow">
       <table><tr>
         <td class="fst"><a href="index.html"><div id="backbutton" class="clickable noselect">&larr;</div></a></td>
-        <td><h1 class="noselect nocursor">JME AED Withdrawal</h1></td>
+        <td><h1 class="noselect nocursor">Seizure recurrence risk after drug withdrawal in JME</h1></td>
         <td class="lst"><div id="infobutton" class="clickable noselect">&#9432;</div></td>
       </tr></table>
     </div>
 
     <div id="content">
       <div class="contentblock shadow">
-        <p>This calculator predicts the probability of seizure recurrence after anti-seizure medication (ASM) withdrawal in people with Juvenile Myoclonic Epilepsy (JME) who are currently seizure-free, based on age at withdrawal, duration of seizure-free interval, and number of ASMs used.</p>
+        <p>A third of people with juvenile myoclonic epilepsy (JME) are drug-resistant, and three-quarters have a seizure relapse when attempting to withdraw antiseizure medication after achieving seizure-freedom. We identified predictors of seizure recurrence to allow for individualised prediction of treatment outcomes in people with JME.</p>
 
         <form id="mainform">
           <div class="half1"><div>
 
             <hr>
-            <p><strong>Age at time of AED withdrawal</strong></p>
+            <p><strong>Age at start of AED reduction</strong></p>
             <input type="number" name="agewithdrawal" id="agewithdrawal" placeholder="30" min="1" max="100" class="shadow">
             <span class="unit">(1–100 years)</span>
 
             <hr>
-            <p><strong>Time since last seizure (seizure-free interval)</strong></p>
+            <p><strong>Time since last seizure (seizure-free interval in years)</strong></p>
             <input type="number" name="sfinterval" id="sfinterval" placeholder="2" min="0" max="50" class="shadow">
             <span class="unit">(0–50 years)</span>
 
@@ -39,7 +39,7 @@
           <div class="half2"><div>
 
             <hr>
-            <p><strong>Number of AEDs used at time of AED reduction</strong></p>
+            <p><strong>Number of AEDs used at start of AED reduction</strong></p>
             <input type="number" name="asmnumber" id="asmnumber" placeholder="1" min="1" max="4" class="shadow">
             <span class="unit">(1–4)</span>
 
@@ -51,7 +51,7 @@
       <div id="resultBlock" class="contentblock shadow" style="display:none;"></div>
 
       <div id="calcButton" class="button shadow blue clickable noselect">
-        <h2 class="centertext">Look-up</h2>
+        <h2 class="centertext">Look up</h2>
       </div>
     </div>
 
@@ -60,7 +60,7 @@
       <div id="popUpTitle"><h2 class="popuptitle">About this calculator</h2></div>
       <div id="popupContent">
         <div class="popcontent">
-          <p>These lookup tables are based on clinical nomograms from a collaborative study between the UMC Utrecht and multiple partners to identify predictors of JME outcome and develop and validate clinically applicable prediction models. This tool estimates the probability of seizure recurrence after medication withdrawal in people with juvenile myoclonic epilepsy (JME) who are currently seizure-free.</p>
+          <p>These lookup tables are based on clinical nomograms from a collaborative study between the UMC Utrecht and multiple partners to identify predictors of JME outcome and develop and validate clinically applicable prediction models.</p>
           <p><strong>Reference:</strong></p>
           <p>Stevelink R, Otte WM, et al. Individualised prediction of drug resistance and seizure recurrence after medication withdrawal in people with juvenile myoclonic epilepsy: a systematic review and individual participant data meta-analysis. <em>eClinicalMedicine</em> 2022; 53:101732. DOI: <a href="https://doi.org/10.1016/j.eclinm.2022.101732" target="_blank">10.1016/j.eclinm.2022.101732</a></p>
           <p><strong>Disclaimer:</strong> For research and clinical decision support only. Always use clinical judgment.</p>

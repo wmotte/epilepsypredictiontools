@@ -2070,28 +2070,28 @@
     var sf  = parseInt(document.querySelector('[name="sfinterval"]').value, 10);
     var asm = parseInt(document.querySelector('[name="asmnumber"]').value, 10);
 
-    if (isNaN(age)) { window.UI.showResult('<p class="error">Please enter a valid age at withdrawal.</p>'); return; }
+    if (isNaN(age)) { window.UI.showResult('<p class="error">Please enter a valid age at start of AED reduction.</p>'); return; }
     if (isNaN(sf))  { window.UI.showResult('<p class="error">Please enter a valid seizure-free interval.</p>'); return; }
-    if (isNaN(asm)) { window.UI.showResult('<p class="error">Please enter a valid number of ASMs.</p>'); return; }
+    if (isNaN(asm)) { window.UI.showResult('<p class="error">Please enter a valid number of AEDs.</p>'); return; }
 
     age = Math.max(1,  Math.min(100, age));
     sf  = Math.max(0,  Math.min(50,  sf));
     asm = Math.max(1,  Math.min(4,   asm));
 
     var idx  = (asm - 1) * 5100 + sf * 100 + (age - 1);
-    var rec2y = (P2[idx] / 100).toFixed(1);
-    var rec5y = (P5[idx] / 100).toFixed(1);
+    // original PHP rounded to whole percentages
+    var rec2y = Math.round(P2[idx] / 100);
+    var rec5y = Math.round(P5[idx] / 100);
 
     var html = '<div style="text-align:center; padding:20px 10px;">'
-      + '<p style="margin-bottom:4px; font-weight:bold;">Predicted probability of seizure recurrence after ASM withdrawal</p>'
       + '<table style="margin:12px auto; border-spacing:20px 4px;">'
-      + '<tr><td style="font-weight:bold; text-align:right;">2-year:</td>'
+      + '<tr><td style="font-weight:bold; text-align:right;">2-year seizure recurrence risk:</td>'
       + '<td style="font-size:2em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + rec2y + '%</td></tr>'
-      + '<tr><td style="font-weight:bold; text-align:right;">5-year:</td>'
+      + '<tr><td style="font-weight:bold; text-align:right;">5-year seizure recurrence risk:</td>'
       + '<td style="font-size:2em; font-weight:bold; color:#1961ab; text-shadow:#777 0 0 10px;">' + rec5y + '%</td></tr>'
       + '</table>'
       + '</div>'
-      + '<p class="result-note">Based on age at withdrawal=' + age + ' years, seizure-free interval=' + sf + ' years, ASMs=' + asm + '</p>'
+      + '<p class="result-note">Based on age at start of AED reduction=' + age + ' years, seizure-free interval=' + sf + ' years, AEDs=' + asm + '</p>'
       + '<p class="result-note">For research and clinical decision support only. Always use clinical judgment.</p>';
     window.UI.showResult(html);
   }

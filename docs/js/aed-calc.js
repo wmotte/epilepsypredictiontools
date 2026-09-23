@@ -89,7 +89,7 @@
     '>90','>90','>90','>90','>90','>90','>90','>90','>90','>90',
     '>90','>90'];
 
-  /* Long-term seizure freedom (index = total * 2, range 0..47.5) */
+  /* 10-year chance of seizure-freedom (index = total * 2, range 0..47.5) */
   var RISK_LONG = ['>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99',
     '>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99','>99',
     '>99','>99',99,99,99,99,98,98,98,98,98,97,97,97,96,96,95,94,94,93,92,91,91,
@@ -210,11 +210,11 @@
     }
 
     var html = '<div>'
-      + '<div class="result"><p>2-year recurrence risk</p><p class="value">' + r2y + '%</p></div>'
-      + '<div class="result"><p>5-year recurrence risk</p><p class="value">' + r5y + '%</p></div>'
-      + '<div class="result"><p>Long-term seizure freedom</p><p class="value">' + rLong + '%</p></div>'
+      + '<div class="result"><p>2-year seizure recurrence risk</p><p class="value">' + r2y + '%</p></div>'
+      + '<div class="result"><p>5-year seizure recurrence risk</p><p class="value">' + r5y + '%</p></div>'
+      + '<div class="result"><p>10-year chance of seizure-freedom (seizure-free for at least 1 year)</p><p class="value">' + rLong + '%</p></div>'
       + '</div>'
-      + '<p class="result-note">Score (recurrence): ' + totalRecur + ' &mdash; Score (long-term): ' + totalLong + '</p>'
+      + '<p class="result-note">Please note that even after seizure recurrence a patient can become seizure free again. Hence, the chance of seizure freedom at ten years is higher than the chance of not having a seizure recurrence.</p>'
       + '<p class="result-note">Results are based on population-level data and should complement, not replace, clinical judgment.</p>';
 
     window.UI.showResult(html);

@@ -51,10 +51,10 @@
     var odds = Math.exp(logodds);
     var p = 100 * (odds / (1 + odds));
 
-    var pRounded = Math.round(p * 10) / 10;
+    var pRounded = Math.round(p); // original PHP rounded to whole percentages
 
     var html = '<div style="text-align:center; padding: 20px 10px;">'
-      + '<p style="margin-bottom:8px; font-weight:bold;">Probability of epilepsy diagnosis</p>'
+      + '<p style="margin-bottom:8px; font-weight:bold;">Probability of epilepsy:</p>'
       + '<p style="font-size:3em; font-weight:bold; text-shadow: #777 0 0 10px; color:#1961ab;">'
       + pRounded + '%</p>'
       + '</div>'
